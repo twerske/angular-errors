@@ -14,19 +14,19 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      {
+    {
         path: '',
         component: HomeComponent
-      },
-      {
+    },
+    {
         path: 'nyan',
         loadChildren: () => import('./nyan/nyan.module').then(m => m.NyanModule)
-      },
-      {
+    },
+    {
         path: 'about',
         loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
-      }
-    ])
+    }
+], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]
